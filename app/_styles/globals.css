@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.900");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+.rdp-root {
+  --rdp-cell-size: 2rem !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-accent-background-color: theme("colors.accent.500") !important;
+  margin: 0 !important;
+  --rdp-font-family: "Josefin Sans", sans-serif !important;
+  --rdp-day-width: 2rem !important;
+  --rdp-day-height: 2rem !important;
+  --rdp-today-color: #fff !important;
+}
+.rdp-day {
+  padding: 0;
+}
+.rdp-nav {
+  display: none !important;
+}
+.rdp-month_caption {
+  justify-content: center !important;
+}
+.rdp-weekday {
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
